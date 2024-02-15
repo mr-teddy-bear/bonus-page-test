@@ -1,0 +1,281 @@
+@import "src/assets/styles/variables.scss";
+
+.wrapper {
+  @include breakpoint(tablet) {
+    padding: 0 16px;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 45px;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 40px;
+  }
+
+  .mainContent {
+    margin-top: 205px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    @include breakpoint(tablet) {
+      margin-top: 171px;
+      gap: 24px;
+      width: 100%;
+    }
+    .mainContentText {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+
+      h1 {
+        font-size: 80px;
+        font-weight: 600;
+        line-height: 96px;
+        letter-spacing: 0px;
+
+        @include breakpoint(tablet) {
+          font-size: 32px;
+          font-weight: 600;
+          line-height: 38px;
+          letter-spacing: 0px;
+        }
+      }
+
+      .divider {
+        width: 60px;
+        height: 2px;
+        background: linear-gradient(
+          90.18deg,
+          #85ffc4 0.67%,
+          rgba(133, 255, 196, 0) 115.5%
+        );
+      }
+
+      h3 {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 48px;
+        letter-spacing: 0px;
+
+        @include breakpoint(tablet) {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 22px;
+          letter-spacing: 0px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.inviteScreen {
+  padding: 60px 0 100px 0;
+  display: flex;
+  justify-content: center;
+
+  @include breakpoint(tablet) {
+    padding: 48px 0 68px 0;
+  }
+
+  .inviteContent {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 846px;
+
+    @include breakpoint(tablet) {
+      width: 100%;
+      gap: 32px;
+    }
+  }
+
+  .inviteLinksWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @include breakpoint(tablet) {
+      flex-wrap: wrap;
+    }
+
+    .inviteLink {
+      flex: 1;
+      padding: 8px 16px;
+      background: #733ddf;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      @include breakpoint(tablet) {
+        min-width: 343px;
+        gap: 24px;
+      }
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+
+      @include breakpoint(tablet) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 4px;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0px;
+
+        @include breakpoint(tablet) {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 19px;
+          letter-spacing: 0px;
+        }
+      }
+
+      .copyText {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px;
+
+        @include breakpoint(tablet) {
+          max-width: 251px;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px;
+          letter-spacing: 0px;
+        }
+      }
+    }
+
+    img {
+      cursor: pointer;
+      width: 46px;
+
+      @include breakpoint(tablet) {
+        width: 36px;
+      }
+    }
+  }
+
+  .friendsBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include breakpoint(tablet) {
+      gap: 12px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 29px;
+      letter-spacing: 0px;
+      text-align: left;
+    }
+
+    .friendEvent {
+      padding: 20px;
+      width: 100%;
+      background: #733ddf66;
+      border-radius: 32px;
+      box-sizing: border-box;
+
+      @include breakpoint(tablet) {
+        padding: 8px;
+      }
+
+      .friendEventContent {
+        width: 100%;
+        border: 2px solid #7030ef;
+        border-radius: 30px;
+        box-sizing: border-box;
+        padding: 16px 24px;
+        gap: 16px;
+
+        @include breakpoint(tablet) {
+          padding: 16px 12px;
+        }
+
+        .row {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          gap: 2px;
+
+          @include breakpoint(tablet) {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+          }
+
+          .email {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0px;
+
+            @include breakpoint(tablet) {
+              font-size: 16px;
+              font-weight: 600;
+              line-height: 19px;
+              letter-spacing: 0px;
+            }
+          }
+
+          .amount {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0px;
+
+            @include breakpoint(tablet) {
+              font-size: 16px;
+              font-weight: 600;
+              line-height: 19px;
+              letter-spacing: 0px;
+            }
+
+            span {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 22px;
+              letter-spacing: 0px;
+              color: #caafff;
+
+              @include breakpoint(tablet) {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0px;
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+$screen-sm-min: 360px;
+$screen-md-min: 900px;
+$screen-lg-min: 1024px;
+$screen-xl-min: 2556px;
+
+@mixin mobile {
+  @media (max-width: #{calc($screen-md-min - 1px)}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{calc($screen-lg-min - 1px)}) {
+    @content;
+  }
+}
+
+@mixin breakpoint($keys...) {
+  @each $key in $keys {
+    @if ($key == mobile) {
+      @include mobile {
+        @content;
+      }
+    } @else if ($key == tablet) {
+      @include tablet {
+        @content;
+      }
+    } @else if ($key ==lg) {
+      @include desktop {
+        @content;
+      }
+    }
+  }
+}

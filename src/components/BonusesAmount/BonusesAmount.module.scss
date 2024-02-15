@@ -1,0 +1,124 @@
+@import "src/assets/styles/variables.scss";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 16px;
+  border-radius: 24px;
+  background: #3c148c;
+
+  @include breakpoint(tablet) {
+    padding: 8px;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .bonusItem {
+    flex: 1;
+    width: 228px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    background: #ffffff1a;
+    border-radius: 16px;
+    box-sizing: border-box;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+
+    .textContent {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+
+      .amountWrapper {
+        display: flex;
+        align-items: flex-end;
+        gap: 4px;
+
+        .amount {
+          color: #fff;
+          font-size: 32px;
+          font-weight: 600;
+          line-height: 38px;
+          letter-spacing: 0px;
+        }
+        .currency {
+          color: #caafff;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19px;
+          letter-spacing: 0px;
+          margin-bottom: 4px;
+        }
+      }
+      .title {
+        color: #caafff;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0px;
+      }
+    }
+  }
+
+  .mobileBonusItem {
+    display: none;
+    flex-direction: column;
+    background: #ffffff1a;
+    border-radius: 16px;
+    padding: 8px;
+    box-sizing: border-box;
+    min-width: 106px;
+    gap: 8px;
+    flex: 1;
+
+    @include breakpoint(tablet) {
+      display: flex;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .title {
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 13px;
+        letter-spacing: 0em;
+        color: #caafff;
+      }
+    }
+
+    .amountWrapper {
+      display: flex;
+      align-items: flex-end;
+      gap: 4px;
+
+      .amount {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0px;
+      }
+      .currency {
+        color: #caafff;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+      }
+    }
+  }
+}

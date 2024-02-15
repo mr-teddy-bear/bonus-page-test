@@ -1,0 +1,36 @@
+@import "src/assets/styles/variables.scss";
+
+.wrapper {
+  width: 320px;
+  padding: 12px 0;
+  box-sizing: border-box;
+  background: #85ffc4;
+  outline: 1px solid #85ffc4;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: -0.25px;
+  text-align: center;
+  color: #0a0122;
+
+  &:hover:not(:disabled) {
+    background: transparent;
+    color: #fff;
+  }
+
+  &:disabled {
+    background: #ffffff80;
+    color: #b8abd0;
+    cursor: default;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 16px;
+    width: 279px;
+    line-height: 19px;
+  }
+}
