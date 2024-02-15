@@ -3,24 +3,25 @@ import classes from "./ReferFirends.module.scss";
 import { ActionButton } from "../../components/Button/ActionButton";
 import { BonusesAmount } from "../../components/BonusesAmount/BonusesAmount";
 import { copyIcon } from "../../assets/images";
+import { Task } from "../../components/Task/Task";
 
 const mocksArr = [
   {
     id: 1,
     email: "c************@passmail.net",
     tasks: [
-      { id: 1, title: "KYC", finished: true, max: null, current: null },
+      { id: 1, title: "KYC", completed: true, max: null, current: null },
       {
         id: 2,
         title: "Spot deposit",
-        finished: true,
+        completed: true,
         max: 1000,
         current: 1000,
       },
       {
         id: 3,
         title: "Futures deposit",
-        finished: false,
+        completed: false,
         max: 4000,
         current: 2000,
       },
@@ -30,18 +31,18 @@ const mocksArr = [
     id: 2,
     email: "k************@passmail.net",
     tasks: [
-      { id: 1, title: "KYC", finished: false, max: null, current: null },
+      { id: 1, title: "KYC", completed: false, max: null, current: null },
       {
         id: 2,
         title: "Spot deposit",
-        finished: false,
+        completed: false,
         max: 1000,
         current: 0,
       },
       {
         id: 3,
         title: "Futures deposit",
-        finished: false,
+        completed: false,
         max: 4000,
         current: 0,
       },
@@ -119,10 +120,45 @@ const ReferFriends: FC = () => {
                       $3 <span>to receive</span>
                     </div>
                   </div>
-                  <div className={classes.tasksWrapper}></div>
+                  <div className={classes.tasksWrapper}>
+                    {friend.tasks.map((task) => (
+                      <Task
+                        title={task.title}
+                        currentProgress={task.current}
+                        max={task.max}
+                        completed={task.completed}
+                        isProgressBar={!!task.max}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      <div className={classes.rulesScreen}>
+        <div className={classes.rulesContent}>
+          <div className={classes.title}>Rules</div>
+          <div className={classes.text}>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
+            nihil saepe vero repellendus nesciunt repellat perferendis libero
+            odio vel totam dolorum dolore laudantium consectetur, ex minus non
+            laborum et delectus. Nihil minima adipisci illo, distinctio ipsum
+            perferendis asperiores perspiciatis officia saepe nesciunt eaque
+            excepturi magnam, obcaecati libero quas atque enim totam, optio
+            laudantium cumque eum! Eveniet esse ratione magnam! Aut? Natus illo
+            impedit culpa, magni nesciunt quam assumenda tempora consequatur
+            veritatis consectetur, ipsa ea neque. Saepe in accusamus enim animi
+            ipsum rerum voluptatibus, repellendus voluptas? Maxime blanditiis
+            impedit mollitia expedita. Harum porro suscipit in earum totam
+            accusamus necessitatibus fugit, soluta veniam quasi facere
+            laudantium nihil fuga esse ut a maxime minus at similique, illo
+            ducimus molestiae quos dolores eum. Ipsum. Nihil fugit amet
+            consectetur neque ea, harum vero et corrupti quibusdam corporis
+            sapiente debitis ullam eos repudiandae non ipsam fuga. Tenetur ipsum
+            excepturi expedita deleniti accusantium dolores, nesciunt ab quam.
           </div>
         </div>
       </div>

@@ -277,5 +277,70 @@
         }
       }
     }
+
+    .tasksWrapper {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+
+      @include breakpoint(tablet) {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.rulesScreen {
+  padding: 60px 0 100px 0;
+  display: flex;
+  justify-content: center;
+
+  @include breakpoint(tablet) {
+    padding: 48px 0 60px 0;
+  }
+
+  .rulesContent {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 846px;
+    align-items: center;
+
+    @include breakpoint(tablet) {
+      width: 100%;
+      gap: 24px;
+    }
+
+    .title {
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 58px;
+      letter-spacing: 0px;
+
+      @include breakpoint(tablet) {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        letter-spacing: 0px;
+      }
+    }
+
+    .text {
+      padding: 20px 24px;
+      background: #733ddf66;
+      border-radius: 32px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0px;
+      color: #caafff;
+
+      @include breakpoint(tablet) {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+      }
+    }
   }
 }
